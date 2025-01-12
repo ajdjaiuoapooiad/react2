@@ -5,7 +5,19 @@ import './index.css';
 
 
 const Greeting = () => {
-  return <h2>My first component</h2>
+  return (
+    <div>
+      <div>
+        <h1>Hello people</h1>
+        <ul>
+          <li>
+            <a href='#'>hello world</a>
+            </li>
+        </ul>
+      </div>
+      <h2>hello world</h2>
+    </div>
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
