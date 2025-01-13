@@ -8,8 +8,8 @@ import './index.css';
 const BookList = () => {
     return (
         <section className='booklist'>
-            <Book job='developer' />
-            <Book title='random title' number={22} />
+            <Book author={author} title={title} image={image} />
+            <Book author={author} title={title} image={image} />
            
         </section>
     )
@@ -28,11 +28,10 @@ const Book = (props) => {
     
     return (
         <article className='book'>
-            <img src={image} alt={title} />
-            <h2>{title}</h2>
-            <h4>{author}</h4>
+            <img src={props.image} alt={props.title} />
+            <h2>{props.title}</h2>
+            <h4>{props.author}</h4>
             <p>{props.job}</p>
-            <p>{props.title}</p>
             <p>{props.number}</p>
 
 
