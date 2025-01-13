@@ -5,9 +5,37 @@ import Greeting from './components/Greet';
 
 
 
+const BookList = () => {
+    return (
+        <section>
+            <Book />
+        </section>
+    )
+}
+
+
+
+
+const Book = () => {
+    return (
+        <article>
+            <Image />
+            <Title />
+            <Author />
+        </article>
+    )
+}
+
+
+const Image = () => <h2>Image</h2>
+const Title = () => <h2>Book Title</h2>
+const Author = () => {
+    return <h2>Author</h2>
+} 
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Greeting />);
+root.render(<BookList />);
 
