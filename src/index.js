@@ -50,7 +50,7 @@ const Book = (props) => {
             <img src={props.image} alt={props.title} />
             <h2>{props.title}</h2>
             <h4>{props.author}</h4>
-            <span className='number'>{props.id}</span>
+            <span className='number'>#{props.id}</span>
         </article>
     )
 }
