@@ -9,6 +9,11 @@ const BookList = () => {
     return (
         <section>
             <Book />
+            <Book />
+            <Book />
+            <Book />
+            <Book />
+            <Book />
         </section>
     )
 }
@@ -27,10 +32,12 @@ const Book = () => {
 }
 
 
-const Image = () => <h2>Image</h2>
-const Title = () => <h2>Book Title</h2>
+const Image = () => (
+    <img src='https://images-fe.ssl-images-amazon.com/images/I/71KXnI8VPqL._SY230_.jpg' alt='React.js＆Next.js超入門 第2版 Kindle版'/>
+)
+const Title = () => <h2>React.js＆Next.js超入門 第2版 Kindle版</h2>
 const Author = () => {
-    return <h2>Author</h2>
+    return <h2>掌田津耶乃</h2>
 } 
 
 
