@@ -14,6 +14,11 @@ const books = [{
     title: 'Ruby on Rails 6 超入門 Kindle版',
     image: 'https://m.media-amazon.com/images/I/71eRnFOgCEL._SL1500_.jpg',
     id: 2,
+},{
+    author: '掌田津耶乃',
+    title: 'Vue.js 3 超入門 Kindle版',
+    image: 'https://m.media-amazon.com/images/I/71QnL928x1L._SL1500_.jpg',
+    id: 3,
 },
 ]
 
@@ -38,13 +43,14 @@ const BookList = () => {
 }
 
 const Book = (props) => {
-    console.log(props);
-    
+   
     return (
         <article className='book'>
+
             <img src={props.image} alt={props.title} />
             <h2>{props.title}</h2>
             <h4>{props.author}</h4>
+            <span className='number'>{props.id}</span>
         </article>
     )
 }
