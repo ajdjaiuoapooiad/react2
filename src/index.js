@@ -25,8 +25,8 @@ console.log(newNames);
 const BookList = () => {
     return (
         <section className='booklist'>
-            {names.map((name) => {
-                return <h1>{name}</h1>
+            {books.map((book) => {
+                return <Book title={book.title} author={book.author} image={book.image} />
             })}
         </section>
     )
@@ -35,17 +35,6 @@ const BookList = () => {
 
 
 
-const book1 = {
-    author: '掌田津耶乃',
-    title: 'React.js＆Next.js超入門 第2版 Kindle版',
-    image: 'https://m.media-amazon.com/images/I/71KXnI8VPqL._SL1500_.jpg',
-}
-
-const book2 = {
-    author: '掌田津耶乃',
-    title: 'Ruby on Rails 6 超入門 Kindle版',
-    image: 'https://m.media-amazon.com/images/I/71eRnFOgCEL._SL1500_.jpg',
-}
 
 
 
@@ -57,10 +46,6 @@ const Book = (props) => {
             <img src={props.image} alt={props.title} />
             <h2>{props.title}</h2>
             <h4>{props.author}</h4>
-            <p>{props.job}</p>
-            <p>{props.number}</p>
-
-
         </article>
     )
 }
