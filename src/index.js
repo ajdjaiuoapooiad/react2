@@ -8,37 +8,39 @@ import './index.css';
 const BookList = () => {
     return (
         <section className='booklist'>
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
-            <Book />
+            <Book job='developer' />
+            <Book title='random title' number={22} />
+           
         </section>
     )
 }
 
 
+const title = 'React.js＆Next.js超入門 第2版 Kindle版'
+const author = '掌田津耶乃'
+const image = 'https://m.media-amazon.com/images/I/71KXnI8VPqL._SL1500_.jpg'
 
 
-const Book = () => {
+
+
+const Book = (props) => {
+    console.log(props);
+    
     return (
         <article className='book'>
-            <Image />
-            <Title />
-            <Author />
+            <img src={image} alt={title} />
+            <h2>{title}</h2>
+            <h4>{author}</h4>
+            <p>{props.job}</p>
+            <p>{props.title}</p>
+            <p>{props.number}</p>
+
+
         </article>
     )
 }
 
 
-const Image = () => (
-    <img src='https://images-fe.ssl-images-amazon.com/images/I/71KXnI8VPqL._SY230_.jpg' alt='React.js＆Next.js超入門 第2版 Kindle版'/>
-)
-const Title = () => <h2>React.js＆Next.js超入門 第2版 Kindle版</h2>
-const Author = () => {
-    return <h2>掌田津耶乃</h2>
-} 
 
 
 
