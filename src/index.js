@@ -51,19 +51,24 @@ const Book = (props) => {
 
 
 const Event = () => {
-    const handleFormInput = () => {
-        console.log('handle form input');
+    const handleFormInput = (e) => {
+        console.log(e.target.value);
     }
     const handleButtonClick = () => {
         alert('handle button click')
     }
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+        console.log('form is submited');
+        
+    }
 
     return (
         <section>
-            <form>
+            <form onSubmit={handleFormSubmit} >
                 <h2>Typical Form</h2>
                 <input type='text' name='example' onChange={handleFormInput} style={{margin: '1rem 0'}} />
-                <button onClick={handleButtonClick}>submit</button>
+                <button onClick={handleButtonClick} type='submit'>submit</button>
             </form>
         </section>
     )
